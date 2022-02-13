@@ -22,135 +22,147 @@ body {
   font-family: "Red Hat Display", sans-serif;
   background-color: var(--pale-blue);
   background-image: url("images/pattern-background-desktop.svg");
-  background-size: contain;
   background-repeat: no-repeat;
 }
 
 button {
   background-color: transparent;
   border: none;
+  transition: ease-in-out 0.2s;
   font: inherit;
 }
 
 .ordercard {
-  width: 450px;
-  margin: 100px auto;
+  width: 27.5rem;
+  margin: 6.25rem auto;
   text-align: center;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 20px 10px hsl(245, 75%, 52%, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem 0.3rem var(--pale-blue);
 }
 
-.ordercard img {
+.ordercard__hero {
   width: 100%;
-  border-radius: 15px 15px 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 
-.ordercard__summary {
-  padding: 50px;
+.ordercard__body {
+  padding: 2rem 3rem;
 }
 
-.ordercard__summary h2 {
+.ordercard__title {
   color: var(--dark-blue);
   font-weight: 900;
   font-size: 1.75rem;
-  margin-bottom: 20px;
 }
 
-.ordercard__summary {
+.ordercard__text {
   color: var(--desaturated-blue);
   line-height: 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  padding: 1rem;
 }
 
-.plan_type {
+.plan {
+  padding: 0.5rem 0;
   display: flex;
-  margin-top: 25px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--very-pale-blue);
-  border-radius: 15px;
+  border-radius: 1rem;
+  color: var(--desaturated-blue);
 }
 
-.plan_text {
+.plan__headercol {
   display: flex;
-  margin: 20px 0 20px 20px;
+  margin: 1.25rem 0 1.25rem 1.25rem;
 }
 
-.plan_text h3 {
+.plan__heading {
   color: var(--dark-blue);
   font-size: 1rem;
   font-weight: 900;
 }
 
-.plan_text img {
+.plan__icon {
   height: 100%;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
-.plan_type button {
+.plan__button {
   color: var(--bright-blue);
   text-decoration: underline;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   font-weight: 700;
   font-size: 0.9rem;
 }
 
-.plan_type button:hover {
-  color: hsl(245, 50%, 60%);
+.plan__button:hover {
+  opacity: 75%;
   text-decoration: none;
 }
 
-.ordercard__buttons {
-  margin-top: 50px;
-}
-
-.ordercard__buttons button {
+.ordercard__largebutton {
   width: 100%;
-  margin-bottom: 15px;
-  padding: 15px;
+  margin-top: 1rem;
+  padding: 1rem;
   font-size: 0.95rem;
   font-weight: 900;
 }
 
-.payment {
+.ordercard__options {
+  margin-top: 1rem;
+}
+
+.ordercard__paymentbutton {
   background-color: var(--bright-blue);
   color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 20px 10px hsl(245, 75%, 52%, 0.1);
+  border-radius: 0.625rem;
+  box-shadow: 0 1rem 1rem 0.3rem var(--pale-blue);
 }
 
-.payment:hover {
-  background-color: hsl(245, 50%, 60%);
+.ordercard__paymentbutton:hover {
+  opacity: 75%;
 }
 
-.cancel {
+.ordercard__cancelbutton {
   color: var(--desaturated-blue);
 }
 
-.cancel:hover {
+.ordercard__cancelbutton:hover {
   color: var(--dark-blue);
 }
 
 @media (max-width: 500px) {
-  :root {
-    font-size: 14px;
-  }
-
   .ordercard {
-    width: 320px;
+    width: 20rem;
   }
 
-  .ordercard__summary {
-    padding: 20px;
+  .ordercard__body {
+    padding: 1rem 1.25rem;
   }
 
-  .ordercard__summary h2 {
+  .ordercard__text {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+  }
+
+  .ordercard__title {
     font-size: 1.4rem;
-    margin-top: 10px;
+    margin-top: 0.3rem;
   }
 
-  .ordercard__buttons {
-    margin-top: 20px;
+  .plan {
+    padding: 0.25rem 0;
+    font-size: 0.8rem;
+  }
+
+  .plan__heading {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .ordercard__options {
+    margin-top: 0.5rem;
   }
 }
